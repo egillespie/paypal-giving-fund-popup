@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Express Checkout with PayPal Giving Fund Demo</title>
+</head>
+<body>
+  
+  <form id="donateForm" action="https://www.paypal-donations.com/pp-charity/PayPalDonationController" method="POST">
+    <input type="hidden" name="ACTION" value="PayPalDonation">
+    <input type="hidden" name="SUB_ACTION" value="Init">
+    <input type="hidden" name="nonprofitId" value="145439">
+    <input type="hidden" name="nonprofitName" value="Helping Women Period, Inc.">
+    <input type="hidden" name="mfFeeAdded" value="false">
+    <input type="hidden" name="sourceId" value="0">
+    <input type="hidden" name="campaignId" value="0">
+    <input type="hidden" name="donationAmount" value="1">
+    <input type="hidden" name="iframeFlag" value="true">
+    <input type="hidden" name="recurringFlag" value="false">
+    <input type="hidden" name="shareContactInfo" value="true">
+  </form>
+  
+  <script type="text/javascript">
+    document.getElementById('donateForm').submit();
+  </script>
+
+</body>
+</html>

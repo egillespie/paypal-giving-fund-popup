@@ -2,30 +2,73 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Express Checkout with PayPal Giving Fund Demo</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <style type="text/css">
+    .donation-overlay {
+      display: none;
+      position: absolute;
+      left: 0;
+      top: 0;
+      padding: 5% 20%; 
+      background-color: rgba(0,0,0,0.7);
+      width: 100%;
+      height: 100%;
+      z-index: 10000;
+    }
+    
+    .responsive-overlay {
+      padding: 5% 20%;
+    }
+    
+    @media (max-width: 768px) {
+      .responsive-overlay {
+        padding: 5%;
+      }
+    }
+
+    .donation-container {
+      position: relative;
+      height: 0;
+      overflow: hidden;
+      
+      width: 100%;
+      height: 100%;
+    }
+    
+    .donation-container iframe {
+      position: absolute;
+      top:0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      min-height: 650px;
+      
+      border: 0
+    }
+  </style>
 </head>
 <body>
 
   <div class="container">
     <h1>Express Checkout with PayPal Giving Fund Demo</h1>
     <p>To get started, click the button below.</p>
-
-    <form action="https://www.paypal-donations.com/pp-charity/PayPalDonationController" method="POST" target="_new">
-      <input type="hidden" name="ACTION" value="PayPalDonation">
-      <input type="hidden" name="SUB_ACTION" value="Init">
-      <input type="hidden" name="nonprofitId" value="145439">
-      <input type="hidden" name="nonprofitName" value="Helping Women Period, Inc.">
-      <input type="hidden" name="mfFeeAdded" value="false">
-      <input type="hidden" name="sourceId" value="0">
-      <input type="hidden" name="campaignId" value="0">
-      <input type="hidden" name="donationAmount" value="1">
-      <input type="hidden" name="iframeFlag" value="true">
-      <input type="hidden" name="recurringFlag" value="false">
-      <input type="hidden" name="shareContactInfo" value="true">
-      <input type="submit" value="Donate $1" class="btn btn-success">
-    </form>
+    <input type="button" value="Donate $1" class="btn btn-success" onclick="initDonation()">
   </div>
+
+  <div class="donation-overlay responsive-overlay">
+    <div class="donation-container">
+      <iframe src="/donate-form.html"></iframe>
+    </div>
+  </div>
+
+  <script src="http://code.jquery.com/jquery-3.0.0.min.js"></script>
+  <script type="text/javascript">
+    function initDonation() {
+      $('.donation-overlay').show();
+    }
+  </script>
 
 </body>
 </html>

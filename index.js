@@ -1,5 +1,3 @@
-var config = require('./config.js'); // todo replace with nconf
-
 var restify = require('restify');
 var server = restify.createServer();
 server.use(restify.queryParser({ mapParams: false }));
@@ -15,6 +13,6 @@ server.get(/\/?.*/, restify.serveStatic({
   match: /^.*[A-Za-z]+.html.*$/
 }));
 
-server.listen(config.server.port, () => {
+server.listen(8080, () => {
   console.log('%s listening at %s', server.name, server.url);
 });
