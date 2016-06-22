@@ -1,2 +1,3 @@
-# paypal-giving-fund-express-checkout-demo
-How to use Express Checkout for PayPal Giving Fund Donations
+# PayPal Giving Fund Popup Demo
+
+Shows how to create a PayPal Giving Fund button that opens the donation form in a popup.

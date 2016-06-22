@@ -1,14 +1,14 @@
 {
-  "name": "paypal-giving-fund-express-checkout-demo",
+  "name": "paypal-giving-fund-popup",
   "version": "1.0.0",
-  "description": "Use Express Checkout for PayPal Giving Fund Donations",
+  "description": "Pops up a PayPal Giving Fund donation form",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/egillespie/paypal-giving-fund-express-checkout-demo.git"
+    "url": "git+https://github.com/egillespie/paypal-giving-fund-popup.git"
   },
   "author": {
     "name": "Erik Gillespie",
@@ -17,9 +17,9 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/egillespie/paypal-giving-fund-express-checkout-demo/issues"
+    "url": "https://github.com/egillespie/paypal-giving-fund-popup/issues"
   },
-  "homepage": "https://github.com/egillespie/paypal-giving-fund-express-checkout-demo#readme",
+  "homepage": "https://github.com/egillespie/paypal-giving-fund-popup#readme",
   "dependencies": {
     "restify": "^4.1.1"
   }
