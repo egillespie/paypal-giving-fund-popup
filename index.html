@@ -10,6 +10,21 @@
   <div class="container">
     <h1>Express Checkout with PayPal Giving Fund Demo</h1>
     <p>To get started, click the button below.</p>
+
+    <form action="https://www.paypal-donations.com/pp-charity/PayPalDonationController" method="POST" target="_new">
+      <input type="hidden" name="ACTION" value="PayPalDonation">
+      <input type="hidden" name="SUB_ACTION" value="Init">
+      <input type="hidden" name="nonprofitId" value="145439">
+      <input type="hidden" name="nonprofitName" value="Helping Women Period, Inc.">
+      <input type="hidden" name="mfFeeAdded" value="false">
+      <input type="hidden" name="sourceId" value="0">
+      <input type="hidden" name="campaignId" value="0">
+      <input type="hidden" name="donationAmount" value="1">
+      <input type="hidden" name="iframeFlag" value="true">
+      <input type="hidden" name="recurringFlag" value="false">
+      <input type="hidden" name="shareContactInfo" value="true">
+      <input type="submit" value="Donate $1" class="btn btn-success">
+    </form>
   </div>
 
 </body>
